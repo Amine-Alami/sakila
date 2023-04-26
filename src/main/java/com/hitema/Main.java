@@ -32,7 +32,7 @@ public class Main {
             countryDAO.save(myCountry);
 
             // Mettre a jour le nouveau pays
-            // countryDAO.update(myCountry.name("MyCountryUpdated"));
+            countryDAO.update(myCountry.name("MyCountryUpdated"));
 
             countryDAO.findAll().forEach(System.out::println);
 
