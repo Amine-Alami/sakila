@@ -1127,7 +1127,7 @@ sakila|schema||java1||UPDATE|G</Grants>
       <Position>3</Position>
     </argument>
     <column id="337" parent="298" name="actor_id">
-      <AutoIncrement>201</AutoIncrement>
+      <AutoIncrement>200</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1164,7 +1164,7 @@ sakila|schema||java1||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="344" parent="299" name="address_id">
-      <AutoIncrement>606</AutoIncrement>
+      <AutoIncrement>605</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1234,7 +1234,7 @@ sakila|schema||java1||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="358" parent="300" name="category_id">
-      <AutoIncrement>17</AutoIncrement>
+      <AutoIncrement>16</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1305,7 +1305,7 @@ sakila|schema||java1||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="371" parent="302" name="country_id">
-      <AutoIncrement>110</AutoIncrement>
+      <AutoIncrement>117</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1333,7 +1333,7 @@ sakila|schema||java1||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="376" parent="303" name="customer_id">
-      <AutoIncrement>600</AutoIncrement>
+      <AutoIncrement>599</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1420,7 +1420,7 @@ sakila|schema||java1||UPDATE|G</Grants>
       <Turn>before-row</Turn>
     </trigger>
     <column id="393" parent="304" name="film_id">
-      <AutoIncrement>1001</AutoIncrement>
+      <AutoIncrement>1000</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1655,7 +1655,7 @@ description</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="438" parent="308" name="inventory_id">
-      <AutoIncrement>4582</AutoIncrement>
+      <AutoIncrement>4581</AutoIncrement>
       <DataType>mediumint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1709,7 +1709,7 @@ film_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="448" parent="309" name="language_id">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1737,7 +1737,7 @@ film_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="453" parent="310" name="payment_id">
-      <AutoIncrement>16050</AutoIncrement>
+      <AutoIncrement>16049</AutoIncrement>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1820,7 +1820,7 @@ film_id</ColNames>
       <Turn>before-row</Turn>
     </trigger>
     <column id="469" parent="311" name="rental_id">
-      <AutoIncrement>16050</AutoIncrement>
+      <AutoIncrement>16049</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1913,7 +1913,7 @@ customer_id</ColNames>
       <Turn>before-row</Turn>
     </trigger>
     <column id="487" parent="312" name="staff_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -2000,7 +2000,7 @@ customer_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="504" parent="313" name="store_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>

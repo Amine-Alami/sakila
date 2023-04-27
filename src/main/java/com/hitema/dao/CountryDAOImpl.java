@@ -22,19 +22,21 @@ public class CountryDAOImpl implements DAO<Country>{
     }
 
     @Override
-    public void save(Country object) {
+    public Country save(Country object) {
         var tx = currentSession.getTransaction();
         tx.begin();
         currentSession.persist(object);
         tx.commit();
+        return object;
     }
 
     @Override
-    public void update(Country object) {
+    public Country update(Country object) {
         var tx = currentSession.getTransaction();
         tx.begin();
         currentSession.update(object);
         tx.commit();
+        return object;
     }
 
     @Override

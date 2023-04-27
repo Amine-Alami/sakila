@@ -1,9 +1,6 @@
 package com.hitema.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.Instant;
 
@@ -12,7 +9,7 @@ import java.time.Instant;
 public class City {
 
     @Id
-    @Column(name="city_id")
+    @Column(name="city_id", nullable = false)
     private Long id;
 
     @Column(name="city")
@@ -20,6 +17,10 @@ public class City {
 
     @Column(name="last_update")
     private Instant lastUpdate;
+
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country country;
 
     public Long getId() {
         return id;
@@ -45,6 +46,14 @@ public class City {
         this.lastUpdate = lastUpdate;
     }
 
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
     @Override
     public String toString() {
         return id + ". \t" + name + "\t" + lastUpdate ;
@@ -62,6 +71,11 @@ public class City {
 
     public City lastUpdate(Instant lastUpdate) {
         this.lastUpdate = lastUpdate;
+        return this;
+    }
+
+    public City country(Country country) {
+        this.country = country;
         return this;
     }
 }

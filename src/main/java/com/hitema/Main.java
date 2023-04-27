@@ -2,6 +2,7 @@ package com.hitema;
 
 import com.hitema.dao.CityDAOImpl;
 import com.hitema.dao.CountryDAOImpl;
+import com.hitema.entities.City;
 import com.hitema.entities.Country;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,23 +15,26 @@ public class Main {
         public static void main(String[] args) {
             logger.info("<<<<<Start Console MySql>>>>>");
 
-            CountryDAOImpl countryDAO = new CountryDAOImpl();
-            CityDAOImpl cityDAO = new CityDAOImpl();
-
-            // Afficher tous les pays
-            countryDAO.findAll().forEach(country -> logger.info(country.toString()));
-            // Afficher tous les villes
-            cityDAO.findAll().forEach(city -> logger.info(city.toString()));
-
-            // Ajouter un nouveau pays
-            Country myCountry = new Country().name("MyCountry").lastUpdate(Instant.now());
-            countryDAO.save(myCountry);
-
-            // Mettre a jour le nouveau pays
-            countryDAO.update(myCountry.name("MyCountryUpdated"));
-
-            countryDAO.findAll().forEach(country -> logger.info(country.toString()));
+            countryCityOperations();
 
             logger.info("<<<<<End Console MySql>>>>>");
         }
+
+    private static void countryCityOperations() {
+        CountryDAOImpl countryDAO = new CountryDAOImpl();
+        CityDAOImpl cityDAO = new CityDAOImpl();
+
+        // Creer un nouveau pays
+        Country myCountry = countryDAO.save(new Country().name("MyCountry").lastUpdate(Instant.now()));
+        // Mettre a jour le nouveau pays
+        myCountry = countryDAO.update(myCountry.name("MyCountryUpdated"));
+
+        // Creer une nouvelle ville
+        City myCity = cityDAO.save(new City().name("MyCity").lastUpdate(Instant.now()).country(myCountry));
+
+        // Afficher tous les pays
+        countryDAO.findAll().forEach(country -> logger.info(country.toString()));
+        // Afficher tous les villes
+        cityDAO.findAll().forEach(city -> logger.info(city.toString()));
+    }
 }

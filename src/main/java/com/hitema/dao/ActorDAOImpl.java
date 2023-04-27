@@ -1,27 +1,25 @@
 package com.hitema.dao;
 
 import com.hitema.DBConnection;
-import com.hitema.entities.City;
-import com.hitema.entities.Country;
+import com.hitema.entities.Actor;
 import org.hibernate.Session;
 
 import java.util.List;
 
-public class CityDAOImpl implements DAO<City>{
-
+public class ActorDAOImpl implements DAO<Actor>{
     private final Session currentSession = DBConnection.getCurrentSession();
     @Override
-    public List<City> findAll() {
-        return currentSession.createQuery("FROM City", City.class).getResultList();
+    public List<Actor> findAll() {
+        return currentSession.createQuery("FROM Actor", Actor.class).getResultList();
     }
 
     @Override
-    public City find(Long id) {
-        return currentSession.get(City.class, id);
+    public Actor find(Long id) {
+        return currentSession.get(Actor.class, id);
     }
 
     @Override
-    public City save(City object) {
+    public Actor save(Actor object) {
         var tx = currentSession.getTransaction();
         tx.begin();
         currentSession.save(object);
@@ -30,7 +28,7 @@ public class CityDAOImpl implements DAO<City>{
     }
 
     @Override
-    public City update(City object) {
+    public Actor update(Actor object) {
         var tx = currentSession.getTransaction();
         tx.begin();
         currentSession.update(object);
@@ -39,14 +37,10 @@ public class CityDAOImpl implements DAO<City>{
     }
 
     @Override
-    public void delete(City object) {
+    public void delete(Actor object) {
         var tx = currentSession.getTransaction();
         tx.begin();
         currentSession.delete(object);
         tx.commit();
-    }
-
-    public List<City> getAllByCountry(String country) {
-        return currentSession.createQuery("FROM City ci join Country co where co.country = country", City.class).getResultList();
     }
 }
