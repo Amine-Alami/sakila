@@ -19,7 +19,7 @@ public class Main {
 
         countryCityOperations();
 
-//        actorFilmOperations();
+        actorFilmOperations();
 
         logger.info("<<<<<End Console MySql>>>>>");
     }
@@ -51,9 +51,9 @@ public class Main {
         FilmDaoImpl filmDao = new FilmDaoImpl();
 
         // Afficher tous les acteurs
-        actorDAO.findAll().forEach(actor -> logger.trace(actor.toString()));
+//        actorDAO.findAll().forEach(actor -> logger.trace(actor.toString()));
         // Afficher tous les films
-        filmDao.findAll().forEach(film -> logger.trace(film.toString()));
+//        filmDao.findAll().forEach(film -> logger.trace(film.toString()));
 
         logger.info("********************************");
         actorDAO.getAllByFilm("ALABAMA DEVIL").forEach(actor -> logger.trace(actor.toString()));

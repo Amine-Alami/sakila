@@ -50,7 +50,7 @@ public class ActorDAOImpl implements DAO<Actor>{
                         "SELECT a FROM Actor a join Film f " +
                                 "where f.title = :film"
                         , Actor.class)
-                .setParameter("country",film)
+                .setParameter("film",film)
                 .getResultList();
     }
 }
