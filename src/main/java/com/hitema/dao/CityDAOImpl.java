@@ -4,6 +4,7 @@ import com.hitema.DBConnection;
 import com.hitema.entities.City;
 import com.hitema.entities.Country;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -47,6 +48,12 @@ public class CityDAOImpl implements DAO<City>{
     }
 
     public List<City> getAllByCountry(String country) {
-        return currentSession.createQuery("FROM City ci join Country co where co.country = country", City.class).getResultList();
+        return currentSession.createQuery(
+                "FROM City ci " +
+                    "join Country co on ci.country.id = co.id " +
+                    "where co.name = :country"
+                , City.class)
+                .setParameter("country",country)
+                .getResultList();
     }
 }

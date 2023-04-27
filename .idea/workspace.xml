@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99d2e8e-0416-44bc-8386-21ef044769e6" name="Changes" comment="replace sysout with logger">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/ActorDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/FilmDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0021cd51-907b-4152-8b12-ba79da3a446a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0021cd51-907b-4152-8b12-ba79da3a446a.xml" afterDir="false" />
+    <list default="true" id="f99d2e8e-0416-44bc-8386-21ef044769e6" name="Changes" comment="added actor and film">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CityDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CountryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CountryDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Country.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682432885798</updated>
       <workItem from="1682432887502" duration="3662000" />
-      <workItem from="1682496614050" duration="17631000" />
+      <workItem from="1682496614050" duration="19149000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1682503473943</created>
@@ -157,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682583211890</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added actor and film">
+      <created>1682587312882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682587312882</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +176,7 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="update country" />
     <MESSAGE value="replace sysout with logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace sysout with logger" />
+    <MESSAGE value="added actor and film" />
+    <option name="LAST_COMMIT_MESSAGE" value="added actor and film" />
   </component>
 </project>

@@ -25,16 +25,21 @@ public class Main {
         CityDAOImpl cityDAO = new CityDAOImpl();
 
         // Creer un nouveau pays
-        Country myCountry = countryDAO.save(new Country().name("MyCountry").lastUpdate(Instant.now()));
+        // Country myCountry = countryDAO.save(new Country().name("MyCountry").lastUpdate(Instant.now()));
         // Mettre a jour le nouveau pays
-        myCountry = countryDAO.update(myCountry.name("MyCountryUpdated"));
+        // myCountry = countryDAO.update(myCountry.name("MyCountryUpdated"));
 
         // Creer une nouvelle ville
-        City myCity = cityDAO.save(new City().name("MyCity").lastUpdate(Instant.now()).country(myCountry));
+        // City myCity = cityDAO.save(new City().name("MyCity").lastUpdate(Instant.now()).country(myCountry));
 
         // Afficher tous les pays
-        countryDAO.findAll().forEach(country -> logger.info(country.toString()));
+        countryDAO.findAll().forEach(country -> logger.trace(country.toString()));
         // Afficher tous les villes
-        cityDAO.findAll().forEach(city -> logger.info(city.toString()));
+        cityDAO.findAll().forEach(city -> logger.trace(city.toString()));
+
+        logger.info("********************************");
+        cityDAO.getAllByCountry("Morocco").forEach(city -> logger.trace(city.toString()));
+        logger.info("********************************");
+        logger.trace(countryDAO.getByCity("Aurora").toString());
     }
 }
