@@ -1,6 +1,7 @@
 package com.hitema.dao;
 
 import com.hitema.DBConnection;
+import com.hitema.entities.City;
 import com.hitema.entities.Country;
 import com.hitema.entities.Film;
 import org.hibernate.Session;
@@ -45,5 +46,14 @@ public class FilmDaoImpl implements DAO<Film>{
         tx.begin();
         currentSession.delete(object);
         tx.commit();
+    }
+
+    public List<Film> getAllByActor(String actor) {
+        return currentSession.createQuery(
+                        "FROM film_actor fa " +
+                                "where fa.name = :actor"
+                        , Film.class)
+                .setParameter("country",actor)
+                .getResultList();
     }
 }

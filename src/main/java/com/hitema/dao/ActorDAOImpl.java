@@ -2,6 +2,7 @@ package com.hitema.dao;
 
 import com.hitema.DBConnection;
 import com.hitema.entities.Actor;
+import com.hitema.entities.Film;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -42,5 +43,14 @@ public class ActorDAOImpl implements DAO<Actor>{
         tx.begin();
         currentSession.delete(object);
         tx.commit();
+    }
+
+    public List<Actor> getAllByFilm(String film) {
+        return currentSession.createQuery(
+                        "FROM film_actor fa " +
+                                "where fa.name = :film"
+                        , Actor.class)
+                .setParameter("country",film)
+                .getResultList();
     }
 }

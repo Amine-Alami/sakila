@@ -3,6 +3,8 @@ package com.hitema.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "actor")
@@ -17,6 +19,14 @@ public class Actor {
     private String lastName;
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
+
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = { @JoinColumn(name = "actor_id") },
+            inverseJoinColumns = { @JoinColumn(name = "film_id") }
+    )
+    Set<Film> films = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -48,6 +58,14 @@ public class Actor {
 
     public void setLastUpdate(LocalDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    public Set<Film> getFilms() {
+        return films;
+    }
+
+    public void setFilms(Set<Film> films) {
+        this.films = films;
     }
 
     @Override

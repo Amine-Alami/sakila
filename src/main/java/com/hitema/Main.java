@@ -1,7 +1,9 @@
 package com.hitema;
 
+import com.hitema.dao.ActorDAOImpl;
 import com.hitema.dao.CityDAOImpl;
 import com.hitema.dao.CountryDAOImpl;
+import com.hitema.dao.FilmDaoImpl;
 import com.hitema.entities.City;
 import com.hitema.entities.Country;
 import org.slf4j.Logger;
@@ -10,15 +12,17 @@ import org.slf4j.LoggerFactory;
 import java.time.Instant;
 
 public class Main {
-        private static final Logger logger = LoggerFactory.getLogger(Main.class);
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
-        public static void main(String[] args) {
-            logger.info("<<<<<Start Console MySql>>>>>");
+    public static void main(String[] args) {
+        logger.info("<<<<<Start Console MySql>>>>>");
 
-            countryCityOperations();
+        countryCityOperations();
 
-            logger.info("<<<<<End Console MySql>>>>>");
-        }
+        actorFilmOperations();
+
+        logger.info("<<<<<End Console MySql>>>>>");
+    }
 
     private static void countryCityOperations() {
         CountryDAOImpl countryDAO = new CountryDAOImpl();
@@ -41,5 +45,19 @@ public class Main {
         cityDAO.getAllByCountry("Morocco").forEach(city -> logger.trace(city.toString()));
         logger.info("********************************");
         logger.trace(countryDAO.getByCity("Aurora").toString());
+    }
+    private static void actorFilmOperations() {
+        ActorDAOImpl actorDAO = new ActorDAOImpl();
+        FilmDaoImpl filmDao = new FilmDaoImpl();
+
+        // Afficher tous les acteurs
+        actorDAO.findAll().forEach(actor -> logger.trace(actor.toString()));
+        // Afficher tous les films
+        filmDao.findAll().forEach(film -> logger.trace(film.toString()));
+
+        logger.info("********************************");
+        actorDAO.getAllByFilm("film").forEach(actor -> logger.trace(actor.toString()));
+        logger.info("********************************");
+        filmDao.getAllByActor("acteur").forEach(film -> logger.trace(film.toString()));
     }
 }
