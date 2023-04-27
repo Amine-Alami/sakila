@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99d2e8e-0416-44bc-8386-21ef044769e6" name="Changes" comment="First commit">
+    <list default="true" id="f99d2e8e-0416-44bc-8386-21ef044769e6" name="Changes" comment="update country">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/hitema/dao/CountryDAOImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CityDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CountryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CountryDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Country.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -40,8 +49,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "C:/Users/alami/Desktop/H3Java/sakila",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -50,12 +64,20 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.hitema.dao" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.hitema.dao" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../jdk-17.0.7" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.hitema.Main" />
       <module name="sakila" />
       <extension name="coverage">
@@ -68,9 +90,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CountryDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sakila" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hitema.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hitema.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.hitema.dao.CountryDAOImplTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.CountryDAOImplTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CountryDAOImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682432885798</updated>
       <workItem from="1682432887502" duration="3662000" />
-      <workItem from="1682496614050" duration="7173000" />
+      <workItem from="1682496614050" duration="13743000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1682503473943</created>
@@ -92,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682503473943</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update country">
+      <created>1682503827634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682503827634</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +160,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="update country" />
+    <option name="LAST_COMMIT_MESSAGE" value="update country" />
   </component>
 </project>

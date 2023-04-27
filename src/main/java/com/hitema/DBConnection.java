@@ -5,20 +5,15 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class DBConnection {
-    static Session currentSession;
+    private static Session currentSession;
 
-    public Session getCurrentSession() {
+    public static Session getCurrentSession() {
         if ( ! ( currentSession != null && currentSession.isOpen()))
-            currentSession=openCurrentSession();
+            currentSession = getSessionFactory().openSession();
         return currentSession;
     }
 
-    public Session openCurrentSession() {
-        currentSession = getSessionFactory().openSession();
-        return currentSession;
-    }
-
-    private SessionFactory getSessionFactory() {
+    private static SessionFactory getSessionFactory() {
         Configuration cfg = new Configuration().configure();
         return cfg.buildSessionFactory();
     }

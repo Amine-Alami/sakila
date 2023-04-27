@@ -8,15 +8,14 @@ import java.util.List;
 
 public class CityDAOImpl implements DAO<City>{
 
-    private final DBConnection dbConnection = new DBConnection();
-    private final Session currentSession = dbConnection.getCurrentSession();
+    private final Session currentSession = DBConnection.getCurrentSession();
     @Override
     public List<City> findAll() {
         return currentSession.createQuery("FROM City", City.class).getResultList();
     }
 
     @Override
-    public City find(int id) {
+    public City find(Long id) {
         return currentSession.get(City.class, id);
     }
 

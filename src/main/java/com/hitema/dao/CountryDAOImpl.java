@@ -10,15 +10,14 @@ import java.util.List;
 @Transactional
 public class CountryDAOImpl implements DAO<Country>{
 
-    private final DBConnection dbConnection = new DBConnection();
-    private final Session currentSession = dbConnection.getCurrentSession();
+    private final Session currentSession = DBConnection.getCurrentSession();
     @Override
     public List<Country> findAll() {
         return currentSession.createQuery("FROM Country", Country.class).getResultList();
     }
 
     @Override
-    public Country find(int id) {
+    public Country find(Long id) {
         return currentSession.get(Country.class, id);
     }
 

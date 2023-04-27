@@ -13,7 +13,7 @@ public class City {
 
     @Id
     @Column(name="city_id")
-    private long id;
+    private Long id;
 
     @Column(name="city")
     private String name;
@@ -21,11 +21,11 @@ public class City {
     @Column(name="last_update")
     private Instant lastUpdate;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -50,7 +50,7 @@ public class City {
         return id + ". \t" + name + "\t" + lastUpdate ;
     }
 
-    public City id(long id) {
+    public City id(Long id) {
         this.id = id;
         return this;
     }

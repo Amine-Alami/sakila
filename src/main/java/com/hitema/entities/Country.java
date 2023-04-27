@@ -1,9 +1,6 @@
 package com.hitema.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.Instant;
 
@@ -12,8 +9,9 @@ import java.time.Instant;
 public class Country {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="country_id")
-    private long id;
+    private Long id;
 
     @Column(name="country")
     private String name;
@@ -21,11 +19,11 @@ public class Country {
     @Column(name="last_update")
     private Instant lastUpdate;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -50,7 +48,7 @@ public class Country {
         return id + ". \t" + name + "\t" + lastUpdate ;
     }
 
-    public Country id(long id) {
+    public Country id(Long id) {
         this.id = id;
         return this;
     }
