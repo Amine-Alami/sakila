@@ -47,8 +47,8 @@ public class ActorDAOImpl implements DAO<Actor>{
 
     public List<Actor> getAllByFilm(String film) {
         return currentSession.createQuery(
-                        "FROM film_actor fa " +
-                                "where fa.name = :film"
+                        "SELECT a FROM Actor a join Film f " +
+                                "where f.title = :film"
                         , Actor.class)
                 .setParameter("country",film)
                 .getResultList();

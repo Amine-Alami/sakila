@@ -48,12 +48,13 @@ public class FilmDaoImpl implements DAO<Film>{
         tx.commit();
     }
 
-    public List<Film> getAllByActor(String actor) {
+    public List<Film> getAllByActor(String firstName, String lastName) {
         return currentSession.createQuery(
-                        "FROM film_actor fa " +
-                                "where fa.name = :actor"
+                        "SELECT f FROM Film f join Actor a " +
+                            "where a.firstName = :firstName and a.lastName = :lastName"
                         , Film.class)
-                .setParameter("country",actor)
+                .setParameter("firstName",firstName)
+                .setParameter("lastName",lastName)
                 .getResultList();
     }
 }

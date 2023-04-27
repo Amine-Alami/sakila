@@ -49,7 +49,7 @@ public class CountryDAOImpl implements DAO<Country>{
 
     public Country getByCity(String city) {
         return currentSession.createQuery(
-                "FROM Country co " +
+                "SELECT co FROM Country co " +
                         "join City ci on ci.country.id = co.id " +
                         "where ci.name = :city"
                 , Country.class)

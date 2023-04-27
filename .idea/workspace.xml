@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99d2e8e-0416-44bc-8386-21ef044769e6" name="Changes" comment="added getByCity and getByCountry">
+    <list default="true" id="f99d2e8e-0416-44bc-8386-21ef044769e6" name="Changes" comment="modifs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/ActorDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/ActorDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CityDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CountryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/CountryDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/dao/FilmDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/dao/FilmDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hitema/entities/Film.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682432885798</updated>
       <workItem from="1682432887502" duration="3662000" />
-      <workItem from="1682496614050" duration="20181000" />
+      <workItem from="1682496614050" duration="21911000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1682503473943</created>
@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682588673901</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modifs">
+      <created>1682589649119</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682589649119</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +194,7 @@
     <MESSAGE value="replace sysout with logger" />
     <MESSAGE value="added actor and film" />
     <MESSAGE value="added getByCity and getByCountry" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getByCity and getByCountry" />
+    <MESSAGE value="modifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifs" />
   </component>
 </project>
